@@ -1,19 +1,83 @@
 /**index.wxss**/
-.userinfo {
+/* 首页的容器 */
+.home__container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+/* 首页的图片 */
+.home__image {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.image__img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 格言区域 */
+.home__moto {
+  height: 222rpx;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #aaa;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+/* 格言样式与动画 */
+.moto__text {
+  background: linear-gradient(to right, 
+  #426666,
+  #426666, white,
+  #426666
+  );
+  background-size: 450%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-position: left;
+  color: transparent;
+  margin: 0;
+  padding: 0;
+  font-size: 36rpx;
+  border-bottom: 1px dotted #426666;
+}
+@keyframes animate {
+  to {
+    background-position: right;
+  }
+}
+.moto__text--checked {
+  animation: animate 5s infinite linear;
 }
 
-.userinfo-avatar {
-  overflow: hidden;
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+/* 首页入口区域 */
+.home__entry {
+  position: absolute;
+  left: 0;
+  bottom: 200rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.entry__btn {
+  width: 200rpx;
+  padding: 0rpx 15rpx;
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 3px #e6e6e6;
+  font-size: 26rpx;
+}
+.entry__btn:active {
+  background-color: #426666;
+  color: #ffffff;
+}
+.entry__btn::after {
+  border: none;
 }
 
-.usermotto {
-  margin-top: 200px;
-}
+

@@ -1,23 +1,24 @@
 <!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<!-- 首页容器 -->
+<view class="home__container">
+  <!-- 首页背景底色  -->
+  <view class="home__image">
+    <image src="../../assets/image/home_cat2.jpeg" class="image__img" />
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+
+  <!-- 首页的格言 -->
+  <view class="home__moto">
+    <view class="moto__text moto__text--checked">
+      {{ moto }}
+    </view>
   </view>
+
+  <!--  首页入口 -->
+  <view class="home__entry">
+    <button class="entry__btn entry__demo" bindtap="onGotoDemo"> 案例 </button>
+    <button class="entry__btn entry__tool" bindtap="onGotoTool"> 工具 </button>
+    <button class="entry__btn entry__my" bindtap="onGotoMy"> 我的 </button>
+
+  </view>
+
 </view>
