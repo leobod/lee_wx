@@ -4,7 +4,8 @@
     "pages/account/index",
     "pages/logs/logs",
     "pages/demo/qrcode/index",
-    "pages/demo/indexes/index"
+    "pages/demo/indexes/index",
+    "pages/demo/createqrcode/index"
   ],
   "window": {
     "backgroundTextStyle": "light",

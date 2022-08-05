@@ -1,0 +1,14 @@
+/* pages/demo/createqrcode/index.wxss */
+
+.demo__createqrcode {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.createqrcode {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}

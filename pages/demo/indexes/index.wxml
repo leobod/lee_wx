@@ -2,6 +2,6 @@
 <view class="demo__indexes">
 
   <van-cell title="扫一扫" is-link bindtap="onGotoQrCode" />
-  <van-cell title="二维码生成" is-link />
+  <van-cell title="二维码生成" is-link bindtap="onGotoCreateQrCode" />
 
 </view>

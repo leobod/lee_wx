@@ -1,0 +1,10 @@
+<!--pages/demo/createqrcode/index.wxml-->
+<view class="demo__createqrcode">
+
+  <view class="createqrcode">
+    <canvas type="2d" style="width: 260px; height: 260px;" id="myQrcode"></canvas>
+  </view>
+
+
+</view>
+
