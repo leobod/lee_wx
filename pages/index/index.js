@@ -2,7 +2,6 @@
 Page({
   data: {
     moto: '探索的欲望是发展想象的起点'
-
   },
 
   /**
@@ -10,7 +9,7 @@ Page({
    */
   onGotoDemo: function() {
     wx.redirectTo({
-      url: '../account/index'
+      url: '../demo/indexes/index'
     })
   },
 

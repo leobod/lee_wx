@@ -1,0 +1,13 @@
+<!--pages/demo/qrcode/index.wxml-->
+<view class="demo__qrcode">
+
+  <van-notify 
+    id="van-notify" 
+    style="position: fixed; z-index: 1; top: 0; left: 0; width: 100vw;"
+   />
+
+  <view class="qrcode__bg" bindtap="onScan">
+    <text>扫一扫</text>
+  </view>
+
+</view>
